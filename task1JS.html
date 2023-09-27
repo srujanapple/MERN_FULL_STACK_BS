@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1JS</title>
+</head>
+<body>
+    <script>
+        function reverse(num){
+            const numstr = num.toString();
+            const reversedstr = numstr.split('').reverse().join('');
+            const reversednum = parseInt(reversedstr,10);
+            return reversednum;
+        }
+
+        x = reverse(32243);
+        document.write("The number is " + x);
+    </script>
+</body>
+</html>

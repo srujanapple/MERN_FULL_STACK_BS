@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Task3JS</title>
+</head>
+<body>
+    <div class="container m-4 p-3 text-center">
+    <form action="">
+        <div class="form-label">
+            <label for="num1">1st Number(Numerator)</label>
+            <input type="number" id="num1" required>
+        </div>
+        <div class="form-label">
+            <label for="num2">2nd Number(Denominator)</label>
+            <input type="number" id="num2" required>
+        </div>
+
+        <button type="button" id="multiplybutton">Multiply</button>
+        <button type="button" id="dividebutton">Divide</button>
+        
+        <p id="results"></p>
+    </form>
+</div>
+    <script>
+        const num1input = document.getElementById('num1');
+        const num2input = document.getElementById('num2');
+        const multiplyaction = document.getElementById('multiplybutton');
+        const divideaction = document.getElementById('dividebutton');
+        const resultsElement = document.getElementById('results');
+
+        multiplyaction.addEventListener('click',function(){
+            const num1 = parseFloat(num1input.value);
+            const num2 = parseFloat(num2input.value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultsElement.textContent = "Please enter a valid text";
+            }
+            else{
+                const results = num1*num2;
+
+
+            resultsElement.textContent =`Multiplication Result: ${results}`;}
+        })
+
+        divideaction.addEventListener('click',function(){
+            const num1 = parseFloat(num1input.value);
+            const num2 = parseFloat(num2input.value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                resultsElement.textContent = "Please enter a valid text";
+            }
+            else{
+                const results = num1/num2;
+
+
+            resultsElement.textContent =`Division Result: ${results}`;}
+        })
+    </script>
+</body>
+</html>
